@@ -88,7 +88,7 @@ Visit the live portfolio:
 
 **Sahil Naphade**
 
-📧 Email: your-email@example.com
+📧 Email: sahilnaphade676@gmail.com
 
 🌐 Portfolio:
 https://sahilprojects676.github.io/Portfolio/
