@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sahil Naphade | Links</title>
+
+  <!-- FAVICON (TAB LOGO) -->
+  <link rel="icon" href="../img/fav.png" type="image/png">
+  <link rel="shortcut icon" href="../img/fav.png" type="image/png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="landing.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+<script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <!-- LOGO -->
+<img src="../img/fav.png" alt="Sahil Logo" class="logo">
+
+    <h1>Sahil Naphade</h1>
+    <p>Frontend Developer • Problem Solver • Tech Enthusiast</p>
+  </section>
+
+  <!-- LINKS -->
+  <section class="section">
+  <h2>Socials</h2>
+
+  <div class="cards">
+    <a href="#" target="_blank">
+      <i class="fa-brands fa-github"></i>
+      GitHub
+    </a>
+
+    <a href="#" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+      LinkedIn
+    </a>
+
+    <a href="#" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+      Instagram
+    </a>
+
+    <a href="#" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+      Twitter / X
+    </a>
+  </div>
+</section>
+
+
+  <!-- BLOG -->
+  <section class="section">
+    <h2>Blog</h2>
+    <p>Read about my journey, projects, and learnings.</p>
+    <a class="btn" href="blog.html" target="_blank">Read Blog</a>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section">
+  <h2>Certifications</h2>
+
+  <div class="grid">
+    <img src="../cert/certificate-1.jpg" alt="Certificate" onclick="openLightbox(this)">
+    <img src="../cert/2.jpg" alt="" onclick="openLightbox(this)">
+    <img src="../cert/3.jpg" alt="" onclick="openLightbox(this)">
+    <img src="../cert/4.jpg" alt="" onclick="openLightbox(this)">
+    <img src="../cert/5.jpg" alt="" onclick="openLightbox(this)">
+    <img src="../cert/6.jpg" alt="" onclick="openLightbox(this)">
+  </div>
+</section>
+
+  <!-- PORTFOLIO -->
+  <section class="section">
+    <h2>Portfolio</h2>
+    <a class="btn-outline"
+       href="https://sahilprojects676.github.io/Portfolio/"
+       target="_blank">
+      View Portfolio
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Sahil Naphade
+  </footer>
+
+</body>
+</html>
