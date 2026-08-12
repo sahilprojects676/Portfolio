@@ -112,3 +112,42 @@ let trans = () => {
     document.documentElement.classList.remove("transition");
   }, 1200);
 };
+const contactForm = document.getElementById("contact-form");
+const sendButton = document.getElementById("send-button");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        sendButton.textContent = "Sending...";
+        sendButton.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                formStatus.textContent = "Message sent successfully!";
+                sendButton.textContent = "Sent ✓";
+                contactForm.reset();
+            } else {
+                formStatus.textContent = "Failed to send message.";
+                sendButton.textContent = "Send Message";
+                sendButton.disabled = false;
+            }
+
+        } catch (error) {
+            formStatus.textContent = "Something went wrong. Please try again.";
+            sendButton.textContent = "Send Message";
+            sendButton.disabled = false;
+        }
+    });
+}
