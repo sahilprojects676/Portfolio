@@ -1,4 +1,3 @@
-//Getting dom elements
 let mouseCursor = document.querySelector(".cursor-effect");
 let ctaLinks = document.querySelectorAll(
   ".about-content a, .footer-links a, .more-about a"
@@ -6,7 +5,6 @@ let ctaLinks = document.querySelectorAll(
 let projectLinks = document.querySelectorAll(".project-box__link a ion-icon");
 console.log(projectLinks);
 
-//  Mouse effect
 window.addEventListener("mousemove", cursor);
 
 function cursor(e) {
@@ -32,7 +30,6 @@ projectLinks.forEach((link) => {
   });
 });
 
-//GSAP animations
 function fadeOut() {
   TweenMax.to(".intro-btn", 1, {
     opacity: 0,
@@ -66,7 +63,6 @@ function fadeOut() {
     ease: Power2.easeInOut,
   });
 }
-///Timeline
 const tl = gsap.timeline({
   defaults: { ease: "power1.out" },
 });
@@ -98,7 +94,6 @@ tl.fromTo(".effect-3", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(".effect-4", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(".inner", { opacity: 0 }, { opacity: 1, duration: 0.3 }, "-=1");
 
-/////Dark theme toggle
 var checkbox = document.querySelector("input[name=theme]");
 
 checkbox.addEventListener("change", function () {
